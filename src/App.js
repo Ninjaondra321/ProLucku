@@ -193,7 +193,7 @@ function App() {
   return (
     <div id="App" className={"App " + getREALTHEME() + '-theme ' +  ThemeStyle + '-style ' + ThemeColor + '-color' }>
       {SPUST_ME_JESTLI_CHCES_ABY_TI_FUNGOVAL_CANVAS()}
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="quiz/:id" element={<Quiz/>}/>
