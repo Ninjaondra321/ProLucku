@@ -157,19 +157,15 @@
     filter: invert(1) !important;
   }
   
-  .aurora-style.dark-theme .choice-card.correct {
+ .choice-card.correct {
     color: rgb(37, 219, 0);
   }
-  .aurora-style.light-theme .choice-card.correct {
-    color: rgb(37, 219, 0);
-  }
+
   
-  .aurora-style.dark-theme .choice-card.wrong {
+ .choice-card.wrong {
     color: rgb(219, 0, 0);
   }
-  .aurora-style.light-theme .choice-card.wrong {
-    color: rgb(219, 0, 0);
-  }
+
   
 
   .dark-theme .lesson-card-one-item input {
@@ -313,4 +309,34 @@
 
 .filter {
   padding-top: 10px
+}
+
+
+.gradient-style.dark-theme .language-selection input {
+  color:white
+}
+
+.language-selection {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+
+.gradient-style.dark-theme button {
+  color: black !important;
+  background-color: white !important 
+}
+
+.one-line-button-padding {
+  margin-top: 10px;
+}
+
+.no-padding-top {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+.gradient-style .choice-card .marker {
+  color: black;
 }

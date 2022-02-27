@@ -145,7 +145,7 @@ const Edit = ({New}) => {
         <LanguageTitleCard title={Title} changeFunction={setTitle} />
 
         <div className="w-100 center">
-        <div className='language-selection center'>
+        <div className='language-selection center '>
             <input label="NJ" type="radio" id="NJ" name='LANGUAGE' value='NJ'  checked={Language === 'NJ'} onChange={(e) => setLanguage(e.target.value)}/>
             <input label="AJ" type="radio" id="AJ" name='LANGUAGE' value='AJ' checked={Language === 'AJ'} onChange={(e) => setLanguage(e.target.value)} />
             <input label="RJ" type="radio" id="RJ" name='LANGUAGE' value='RJ' checked={Language === 'RJ'} onChange={(e) => setLanguage(e.target.value)} />
@@ -167,7 +167,7 @@ const Edit = ({New}) => {
 
         </div>
 
-        <button className="bg-green center w-100" onClick={() => Save()}>Save</button>
+        <button className="bg-green center w-100 one-line-button-padding" onClick={() => Save()}>Save</button>
 
         <div className="icon"></div>
       </div>

@@ -47,19 +47,15 @@ import { useState } from 'react';
             </div>
 
 
+        <h1>Rozšíření</h1>
+          <p>Napište unikátní kód rozšíření</p>
+          <input id="extention_input"  type="search" onBlur={(e) => handleExtentionOutput(e.target.value)}/>
+
         <h1>Data</h1>
             <h3>Cookies</h3>
-                <p>Tato aplikace pokud vím nepoužívá žádné cookies, pouze ServiceWorker a včechna data ukládá do cache </p>
-            <h3>Vymazat šechna data button</h3>
+                <p>Tato aplikace nepoužívá žádné cookies, pouze ServiceWorkers a včechna data ukládá do LocalStorage</p>
 
-            <h3>Pak vymaz-- je to jen na vyzkouseni scrollBaru -- Jsem v Settings.js</h3>
-
-            <button  onClick={() => deleteAllLocalStorage()}>Vymazat všechna data</button>
-
-
-            <h1>Rozšíření</h1>
-            <p>Napište unikátní kód rozšíření</p>
-            <input id="extention_input" type="search" onBlur={(e) => handleExtentionOutput(e.target.value)}/>
+            <button className='w-100'  onClick={() => deleteAllLocalStorage()}>Vymazat všechna data uložená v LocalStorage</button>
 
 
     </div>

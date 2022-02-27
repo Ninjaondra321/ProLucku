@@ -79,7 +79,7 @@ const Home = () => {
     <NavBar L_txt="PSProject" R_icon="settings" R_link="/settings" L_link=""/> 
     <div className="content ">
       <h1>ProLucku</h1>
-      <h3>{timePodnadpis}</h3>
+      <h3 className='no-padding-top'>{timePodnadpis}</h3>
       
 
 
