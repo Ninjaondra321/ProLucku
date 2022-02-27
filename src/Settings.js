@@ -2,7 +2,9 @@ import React from 'react';
 import NavBar from './NavBar';
 import { useState } from 'react';
 
-const Settings = ({Theme, ThemeStyle, ThemeColor, changeFunction}) => {
+
+
+ const  Settings = ({Theme, ThemeStyle, ThemeColor, changeFunction}) => {
 
 
   function deleteAllLocalStorage() {
@@ -10,6 +12,15 @@ const Settings = ({Theme, ThemeStyle, ThemeColor, changeFunction}) => {
   }
 
 
+  function handleExtentionOutput(that) {
+    console.log(that)
+
+    // 2:"{"title":"ProKarla","id":"2","language":"AJ","dict":[{"WordCzech":"Duch","WordOther":"Ghost","id":1},{"WordCzech":"Duše","WordOther":"Soul","id":2},{"WordCzech":"Vězení","WordOther":"Jail","id":3},{"WordCzech":"Tisk","WordOther":"Press","id":4}]}"
+
+    if (that.toLowerCase() === "karel") {
+      localStorage.setItem(1000, '{"title":"ProKarla","id":"1000","language":"AJ","dict":[{"WordCzech":"Duch","WordOther":"Ghost","id":1},{"WordCzech":"Duše","WordOther":"Soul","id":2},{"WordCzech":"Vězení","WordOther":"Jail","id":3},{"WordCzech":"Tisk","WordOther":"Press","id":4}]')
+  
+    }}
 
   return <>
     <NavBar L_txt="Nastavení" R_icon="home" R_link="/" L_link=""/>
@@ -45,8 +56,15 @@ const Settings = ({Theme, ThemeStyle, ThemeColor, changeFunction}) => {
 
             <button  onClick={() => deleteAllLocalStorage()}>Vymazat všechna data</button>
 
+
+            <h1>Rozšíření</h1>
+            <p>Napište unikátní kód rozšíření</p>
+            <input id="extention_input" type="search" onBlur={(e) => handleExtentionOutput(e.target.value)}/>
+
+
     </div>
   </>;
 };
+
 
 export default Settings;
