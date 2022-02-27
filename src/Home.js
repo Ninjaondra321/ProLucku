@@ -104,7 +104,7 @@ const Home = () => {
 
 
 
-        {PakVymazList.filter(filterFunction).map((obj, index) => (<LessonCard  id={obj.id} title={obj.title} content='Home.js line:53' />))}
+        {PakVymazList.filter(filterFunction).map((obj, index) => (<LessonCard  id={obj.id} title={obj.title} language={obj.language}  />))}
 
 
 

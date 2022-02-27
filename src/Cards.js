@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-export const LessonCard = ({id, title, content, language}) => {
+export const LessonCard = ({id, title, language}) => {
   return <div className="lesson-card bg-green" >
       <Link to={"/edit/" + id} New="false">
         <div className="icon icon-small i-three-dots"></div>
         </Link>
       <p className="card-title">{title}</p>
-      <p className="card-content">{content}</p>
+      <p className="card-content">{language}</p>
         <Link to={"/quiz/" + id}>
           <div className="i-play-bg"></div>
             <div className="icon icon-medium i-play"></div>
