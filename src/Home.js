@@ -3,7 +3,7 @@ import TextAnimation from './TextAnimation';
 import Filter from './Filter';
 import NavBar from './NavBar';
 import { NewLessonCard, LessonCard } from './Cards';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 
 const Home = () => {
   const [LanguageFilter, setLanguageFilter] = useState('');
