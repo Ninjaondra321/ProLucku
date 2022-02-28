@@ -23,6 +23,34 @@ import { useState } from 'react';
       
     }}
 
+
+
+
+    function testNotification () {
+
+      if (Notification.permission == 'granted') {
+        navigator.serviceWorker.getRegistration().then(function(reg) {
+          var options = {
+            body: 'Here is a notification body!',
+            
+            vibrate: [100, 50, 100],
+            data: {
+              dateOfArrival: Date.now(),
+              primaryKey: 1
+            },
+            actions: [
+              {action: 'explore', title: 'Explore this new world',
+                icon: 'images/checkmark.png'},
+              {action: 'close', title: 'Close notification',
+                icon: 'images/xmark.png'},
+            ]
+          };
+          reg.showNotification('Hello world!', options);
+        });
+      }
+      
+    }
+
   return <>
     <NavBar L_txt="Nastavení" R_icon="home" R_link="/" L_link=""/>
     
@@ -58,6 +86,11 @@ import { useState } from 'react';
 
             <button className='w-100'  onClick={() => deleteAllLocalStorage()}>Vymazat všechna data uložená v LocalStorage</button>
 
+
+        <div className='fine-padding'>
+        </div>
+
+        <button className='w-100 ' onClick={() => testNotification()}>Na tohle neklikej, nebo vybuchne atomovka a zničí celou planetu Zemi. Takže na to prostě neklikej. Tečka.</button>
 
     </div>
   </>;
