@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ProLucku/static/css/main.5f648e9a.css",
-    "main.js": "/ProLucku/static/js/main.5b830ba8.js",
+    "main.js": "/ProLucku/static/js/main.d78d6379.js",
     "static/js/377.49a594f3.chunk.js": "/ProLucku/static/js/377.49a594f3.chunk.js",
     "service-worker.js": "/ProLucku/service-worker.js",
     "static/media/settings.svg": "/ProLucku/static/media/settings.e6836d371f00596f6b4f.svg",
@@ -26,11 +26,11 @@
     "static/media/three-dots.svg": "/ProLucku/static/media/three-dots.8f4bcbbb25ef94a1ad99.svg",
     "static/media/magnifiingglass.svg": "/ProLucku/static/media/magnifiingglass.a5235f87aae5de581aa0.svg",
     "main.5f648e9a.css.map": "/ProLucku/static/css/main.5f648e9a.css.map",
-    "main.5b830ba8.js.map": "/ProLucku/static/js/main.5b830ba8.js.map",
+    "main.d78d6379.js.map": "/ProLucku/static/js/main.d78d6379.js.map",
     "377.49a594f3.chunk.js.map": "/ProLucku/static/js/377.49a594f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f648e9a.css",
-    "static/js/main.5b830ba8.js"
+    "static/js/main.d78d6379.js"
   ]
 }
