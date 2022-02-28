@@ -13,13 +13,14 @@ import { useState } from 'react';
 
 
   function handleExtentionOutput(that) {
+    console.log('HALOOOOOOOOOOOo')
     console.log(that)
 
     // 2:"{"title":"ProKarla","id":"2","language":"AJ","dict":[{"WordCzech":"Duch","WordOther":"Ghost","id":1},{"WordCzech":"Duše","WordOther":"Soul","id":2},{"WordCzech":"Vězení","WordOther":"Jail","id":3},{"WordCzech":"Tisk","WordOther":"Press","id":4}]}"
 
     if (that.toLowerCase() === "karel") {
-      localStorage.setItem(1000, '{"title":"ProKarla","id":"1000","language":"AJ","dict":[{"WordCzech":"Duch","WordOther":"Ghost","id":1},{"WordCzech":"Duše","WordOther":"Soul","id":2},{"WordCzech":"Vězení","WordOther":"Jail","id":3},{"WordCzech":"Tisk","WordOther":"Press","id":4}]')
-  
+      localStorage.setItem(1000, JSON.stringify({"title":"ProKarla","id":"1000","language":"AJ","dict":[{"WordCzech":"Duch","WordOther":"Ghost","id":1},{"WordCzech":"Duše","WordOther":"Soul","id":2},{"WordCzech":"Vězení","WordOther":"Jail","id":3},{"WordCzech":"Tisk","WordOther":"Press","id":4}]}))
+      
     }}
 
   return <>
