@@ -184,7 +184,7 @@ function App() {
         }
       }
 
-      localStorage.setItem('THEME', '{"THEME":"light","STYLE":"aurora","COLOR":"color02"}')
+      localStorage.setItem('THEME', '{"THEME":"dark","STYLE":"aurora","COLOR":"color02"}')
       return  [ '#19180a', ['#005599', '#882266' ], 5] 
   }
 
