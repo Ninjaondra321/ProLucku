@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 
 export const LessonCard = ({id, title, language}) => {
+  if (title === "") {title = "Untilteled"}
   return <div className="lesson-card bg-green" >
       <Link to={"/edit/" + id} New="false">
         <div className="icon icon-small i-three-dots"></div>
@@ -62,8 +63,8 @@ export const EditWordCard = ({obj, deleteSlovicko, afterEditing}) => {
   const translateID = obj.id
 
   return <div key={translateID} className="EditTranslateCard">
-      <input value={WordCzech} onChange={(e) => setWordCzech(e.target.value)} onBlur={() => afterEditing(translateID, WordCzech, WordOther)}   />
-      <input value={WordOther}  onChange={(e) => setWordOther(e.target.value)}  onBlur={() => afterEditing(translateID, WordCzech, WordOther)}   />
+      <input type="text" value={WordCzech} onChange={(e) => setWordCzech(e.target.value)} onBlur={() => afterEditing(translateID, WordCzech, WordOther)}   />
+      <input type="text" value={WordOther}  onChange={(e) => setWordOther(e.target.value)}  onBlur={() => afterEditing(translateID, WordCzech, WordOther)}   />
       <button className="icon i-trash c-pointer" onClick={() => deleteSlovicko()}></button>
 
   </div>;

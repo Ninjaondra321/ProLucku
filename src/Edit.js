@@ -153,8 +153,8 @@ const Edit = ({New}) => {
         </div>
 
         <div className="EditTranslateCard EditTranslateCard-main">
-          <input placeholder="Česky"  value={WordCzech} onChange={(e) => setWordCzech(e.target.value)}/>
-          <input placeholder="English" value={WordOther} onChange={(e) => setWordOther(e.target.value)}/>
+          <input  type="text" placeholder="Česky"  value={WordCzech} onChange={(e) => setWordCzech(e.target.value)}/>
+          <input type="text" placeholder="English" value={WordOther} onChange={(e) => setWordOther(e.target.value)}/>
           <button onClick={() => addIntoDictonary()} >Přidat</button>
         </div>
 

@@ -342,6 +342,29 @@
 }
 
 
+.dark-theme input[type="text"] {
+  background-color: black;
+  color: white;
+  border: none;
+  border-bottom: white solid 1px;
+  border-radius: 3px;
+  height: 25px;
+  margin-right: 2px;
+}
+
+.lesson-card-one-item input {
+  height: 45px !important; 
+}
+
+.gradient-style.dark-theme input[type="radio"]:checked {
+  color: black !important;
+  background-color: white !important;
+}
+
+.gradient-style.light-theme input[type="radio"]:checked {
+  color: white !important;
+  background-color: black !important;
+}
 
 /*--- REFORMACE STYLŮ ---- */
 

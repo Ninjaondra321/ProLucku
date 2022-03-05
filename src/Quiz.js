@@ -44,54 +44,36 @@ export const QuizWidget = ({dict }) => {
 
   const [isNextShown, setIsNextShown] = useState(false);
   
-  
-  
+
   // Generate random number
   function genRandomID(keepTrack) {
     var copy = recentWordsID
-
-    
+  
     // Maintain the lenght
-    if (recentWordsID.length === 3) {
-      copy.pop
-    } else {
-
+    if (recentWordsID.length === 4) {
+      copy.shift()
     }
-    let number = undefined
     
-
-    
-
     function myIncludes(numero) {
+      if (copy.length === 0) {return false}
       for (let i = 0; i < copy.length; i++) {
         if (copy[i] == numero) {return true}        
       }
       return false
     }
 
-    function myRemoveLast() {
-      let temp = []
-
-      for (let i = 1; i < copy.length; i++) {
-        temp.push(copy[i])
-        
-      }
-
-      return temp
-    }
-
-    let tempCopyOfRecent = []
-
+    // Generate random number
+    let number = undefined
     do {
       number = Math.floor(Math.random() * dict.length)
     } while (myIncludes(number.toString()) && keepTrack);
 
+    // Add the number to the KeepTrack array
     if (keepTrack) {
-      copy.append(number)
-      // setRecentWordsID([...recentWordsID, number])
+      copy.push(number)
     }
 
-    setRecentWordsID(copy)
+
     return number
    }
 
