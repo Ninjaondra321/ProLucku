@@ -23,6 +23,12 @@ function App() {
   const [ThemeStyle, setThemeStyle] = useState(getCurrent('STYLE'));
   const [ThemeColor, setThemeColor] = useState(getCurrent('COLOR'));
 
+  if (localStorage.length === 0) {
+    localStorage.setItem("THEME", JSON.stringify({COLOR: "color02",
+    STYLE: "aurora",
+    THEME: "system"}))
+  }
+
   function getCurrent (tamto) {
     try {
       return JSON.parse(localStorage.getItem('THEME'))[tamto]
